@@ -1,0 +1,24 @@
+{
+  "name": "@agacraft/extension",
+  "version": "1.0.0",
+  "description": "extension by AgaCraft for node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianCraft07/extension.git"
+  },
+  "keywords": ["extension", "node", "aga", "aga-craft"],
+  "author": "AgaCraft",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrianCraft07/extension/issues"
+  },
+  "dependencies": {
+    "@agacraft/fs": "^1.0.0",
+    "@agacraft/classes": "^1.0.0"
+  },
+  "homepage": "https://github.com/AdrianCraft07/extension#readme"
+}

@@ -1,0 +1,3 @@
+interface Buffer {
+  toFile(): void;
+}
