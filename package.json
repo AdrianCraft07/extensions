@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AdrianCraft07/extension.git"
+    "url": "git+https://github.com/AdrianCraft07/extensions.git"
   },
   "keywords": ["extension", "node", "aga", "aga-craft"],
   "author": "AgaCraft",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AdrianCraft07/extension/issues"
+    "url": "https://github.com/AdrianCraft07/extensions/issues"
   },
   "dependencies": {
     "@agacraft/fs": "^1.0.0",
     "@agacraft/classes": "^1.0.0"
   },
-  "homepage": "https://github.com/AdrianCraft07/extension#readme"
+  "homepage": "https://github.com/AdrianCraft07/extensions#readme"
 }
