@@ -1,4 +1,4 @@
-const Json = require('@agacraft/class/Json')
+const Json = require('@agacraft/classes/Json')
 
 function type(data) {
   return toString.call(data);

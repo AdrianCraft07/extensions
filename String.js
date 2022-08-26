@@ -1,5 +1,4 @@
 const afs = require('@agacraft/fs');
-const Json = require('@agacraft/class/Json');
 
 /**
  *
@@ -25,9 +24,6 @@ addFunction('replaceFull', function (replaces, sign) {
       }
     });
   return newText.txt;
-});
-addFunction('toJson', function () {
-  return new Json(this);
 });
 
 addFunction('toObject', function () {

@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@agacraft/fs": "^1.0.0",
+
     "@agacraft/classes": "^1.0.0"
   },
   "homepage": "https://github.com/AdrianCraft07/extensions#readme"
