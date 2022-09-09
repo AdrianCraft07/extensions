@@ -1,12 +1,12 @@
-const { file } = require('@agacraft/fs')
-
-/**
- * @param {string} name
- * @param {function} func
- */
-let addFunction = function (name, func) {
-  Buffer.prototype[name] = func;
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-addFunction('toFile', function (path = './file.txt') {
-  file(path, this)
-})
+Object.defineProperty(exports, "__esModule", { value: true });
+const fs_1 = __importDefault(require("@agacraft/fs"));
+let addFunctionBuffer = function (name, func) {
+    Buffer.prototype[name] = func;
+};
+addFunctionBuffer('toFile', function (path = './file.txt') {
+    fs_1.default.file(path, this);
+});

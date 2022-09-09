@@ -1,22 +1,21 @@
-interface Json <K>{
-  toObject(): K;
-  toString(): String;
-  copy(): Json<K>;
-  compare(Json:Json): Boolean;
-  toFile(path: fs.PathLike): void;
-}
+declare function type(data: any): string;
+declare function isArray(data: any): boolean;
+declare function isObject(data: any): boolean;
+declare function isIterable(data: any): boolean;
+declare let addPropertyArray: (name: string, func: (...args: any) => any) => void;
+declare let addFunctionArray: (name: string, func: (...args: any) => any) => void;
 interface Array<T> {
-  toJson(): Json<T[]>;
-  toObject(): Object;
-  _toString(): String;
-  search(): String;
-  keys(): String[];
-  deleteIndex(): T[];
-  getData(): any[];
-  max(): T[];
-  dataExists(): Boolean;
-  end(): Number;
-  endItem(): T;
-  endDelete(): T[];
-  compare(): Boolean;
+    toObject(): {
+        [key: string]: any;
+    };
+    _toString(): string;
+    search(item: any): string[];
+    deleteIndex(spaces?: number | number[]): any[];
+    getData(route: string): any;
+    max(number: number): any[];
+    end: number;
+    endItem(): T;
+    endDelete(): T[];
+    compare(arr: any[]): boolean;
+    upLevel(): any[];
 }

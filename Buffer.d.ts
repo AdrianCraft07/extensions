@@ -1,3 +1,6 @@
-interface Buffer {
-  toFile(): void;
+declare global {
+    interface Buffer {
+        toFile(path?: string): void;
+    }
 }
+export {};

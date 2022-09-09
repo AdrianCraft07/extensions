@@ -1,9 +1,11 @@
-import fs from 'fs';
-interface String{
-  toFile(path: fs.PathLike): String;
-  replaceFull(replaces: String, sign: String): String;
-  reverse():String
-  toObject():Object
-  toRegExp(flags: 'i' | 'g' | 'gi'): RegExp
-  setLength(length:Number): String
+declare global {
+    interface String {
+        toFile(path: string): void;
+        replaceFull(replaces: string[], sign?: string): string;
+        toObject(): Object;
+        toRegExp(flags?: string): RegExp;
+        reverse(): string;
+        setLength(length: number): string;
+    }
 }
+export {};

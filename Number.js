@@ -1,27 +1,17 @@
-/**
- * @param {string} name
- * @param {function} func
- */
- let addProperty = function (name, func) {
-  Number.prototype.__defineGetter__(name, func);
-};
-
-/**
- * @param {string} name
- * @param {function} func
- */
-let addFunction = function (name, func) {
-  Number.prototype[name] = func;
-};
-addFunction('round', function () {
-  return Math.round(this)
-})
-addFunction('absolute', function () {
-  return Math.abs(this)
-})
-addFunction('raised', function (raised) {
-  return Math.pow(this, raised)
+"use strict";
+function addFunctionNumber(name, func) {
+    Number.prototype[name] = func;
+}
+;
+addFunctionNumber('round', function (precision = 0) {
+    return Math.round(this * (10).raised(precision)) / (10).raised(precision);
 });
-addFunction('root', function (root) {
-  return this.raised(1 / root)
+addFunctionNumber('absolute', function () {
+    return Math.abs(this);
+});
+addFunctionNumber('raised', function (raised) {
+    return Math.pow(this, raised);
+});
+addFunctionNumber('root', function (root) {
+    return this.raised(1 / root);
 });
