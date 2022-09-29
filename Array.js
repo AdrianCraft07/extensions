@@ -86,16 +86,9 @@ addFunctionArray('endDelete', function () {
 addFunctionArray('compare', function (arr) {
     if (!isArray(arr))
         throw new TypeError(`${arr} is not Array`);
-    return (this.every(name => {
-        if (isIterable(this[name]))
-            return this[name].compare(arr[name]);
-        return this[name] === arr[name];
-    }) &&
-        arr.every(name => {
-            if (isIterable(arr[name]))
-                return this[name].compare(arr[name]);
-            return arr[name] === this[name];
-        }));
+    if (this === arr) return true
+    if (this.length !== arr.length)return false
+    return this.map((value, index) => value === arr[index] || ((isObject(value) && isObject(arr[index])) || (isArray(value) && isArray(arr[index]))&& value.compare(arr[index]))).filter(value => !value).length === 0
 });
 addFunctionArray('upLevel', function () {
     let response = [];
